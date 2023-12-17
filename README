@@ -1,0 +1,18 @@
+	cdplayer
+
+"cdplayer" is a minimal CDDA (Compact Disk Digital Audio) player
+for linux, that only depend on tinyalsa.  
+
+BUILD:
+	cc -ltinyalsa -o cdplayer cdplayer.c
+
+USAGE:
+	./cdplayer /dev/sr0 (<card>) (<device>) // play cd
+
+	kill -USR1 <proc> // Seek a minute forward
+	kill -USR2 <proc> // Seek a minute backward
+	kill -STOP <proc> // Stop
+	kill -CONT <proc> // Play
+
+LICENSE: 
+	0BSD Copyright (c) 2023 by pedroediaz <ppedroediaz (at) gmail.com>
