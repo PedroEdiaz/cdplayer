@@ -29,7 +29,7 @@ void weite_err( char * s )
 	p=s;
 	while( *p )
 		++p;
-	write( STDERR_FILENO, p, p-s );
+	write( STDERR_FILENO, s, p-s );
 }
 
 int main( int argc, char * argv[] )
@@ -44,7 +44,7 @@ int main( int argc, char * argv[] )
 	{
 		weite_err( "Usage: " );
 		weite_err( argv[0] );
-		weite_err( " /dev/sr0 (<card>) (<device>)" );
+		weite_err( " /dev/sr0 (<card>) (<device>)\n" );
 		goto err0;
 	}
 
