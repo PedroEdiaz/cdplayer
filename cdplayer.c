@@ -44,7 +44,7 @@ int main( int argc, char * argv[] )
 	{
 		weite_err( "Usage: " );
 		weite_err( argv[0] );
-		weite_err( " /dev/sr0 (<card>) (<device>)\n" );
+		weite_err( "cdrom [card=0] [device=0]\n" );
 		goto err0;
 	}
 
